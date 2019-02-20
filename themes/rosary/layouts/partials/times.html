@@ -1,0 +1,13 @@
+<div class="col-lg-3 col-md-3">
+    <div class="p-0 box no-mb border-top-0 border-bottom-0 mt-md-0">
+        <div class="text-center border-top-0 border-bottom box-header mt-0">
+            <h3 class="no-mb">Schedule</h3>
+        </div>
+        <div class="box-simple">
+          {{ range $index, $element := .Site.Data.schedule.times }}
+            <h4>{{ .day }}</h4>
+            <p>{{ .time }}</p>
+          {{ end }}
+        </div>
+    </div>
+</div>

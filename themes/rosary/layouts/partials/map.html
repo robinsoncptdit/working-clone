@@ -1,0 +1,15 @@
+{{ if .Site.Data.settings.site_latitude }}
+  {{ if .Site.Data.settings.site_longitude }}
+      <div style="display: none;">
+        <input id="gmap-lat" value="{{ .Site.Data.settings.site_latitude }}" />
+        <input id="gmap-lng" value="{{ .Site.Data.settings.site_longitude }}" />
+        <input id="gmap-marker" value="{{ .Site.BaseURL }}img/marker.png" />
+       {{ if .Site.Data.settings.site_direction }}
+          <input id="gmap-dir" value="{{ .Site.Data.settings.site_direction }}" />
+        {{ else }}
+          <input id="gmap-dir" value="{{ .Site.Data.settings.site_latitude }},{{ .Site.Data.settings.site_longitude }}" />
+        {{ end }}
+      </div>
+      <div id="map" />
+  {{ end }}
+{{ end }}

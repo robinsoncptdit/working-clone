@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        <div id="all">
+            <!-- Top bar-->
+            {{ partial "top.html" . }}
+            <!-- Top bar end-->
+            <!-- Login Modal-->
+
+            <!--{{ partial "login_modal.html" . }}-->
+
+            {{ partial "nav.html" . }}
+
+            <!-- end BLOCK MAIN -->
+
+            {{ partial "jumbotron.html" . }}
+
+            {{ partial "announcement.html" . }}
+
+            <section class="bar bg-white">
+                <div class="container">
+                    <div class="row">
+                        {{ partial "welcome_message.html" . }}
+                        {{ partial "times.html" . }}
+                    </div>
+                </div>
+            </section>
+            {{ partial "front_boxes.html" . }}
+            <!-- GET IT-->
+
+            {{ partial "front_more.html" . }}
+
+            {{ partial "front_last.html" . }}
+
+            <!-- FOOTER -->
+
+            {{ partial "footer.html" . }}
+
+        </div>
+        <!-- Javascript files-->
+
+        {{ partial "footer_js_inc.html" . }}
+
+        <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/#/collections/post";
+        });
+      }
+    });
+  }
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{{ with $.Params.alert }}
+<section class="alert alert-warning alert-dismissible" data-pg-name="Alert">
+    <div class="container">
+        <div class="row">
+            <div class="text-center-sm col-lg-12">
+                <p>{{ $.Params.alert_announcement }}</p>
+            </div>
+        </div>
+    </div>
+    <button type="button" data-dismiss="alert" class="close">
+        <span aria-hidden="true">×</span>
+        <span class="sr-only">Close</span>
+    </button>
+</section>
+{{ end }}

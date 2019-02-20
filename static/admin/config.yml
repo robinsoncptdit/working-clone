@@ -1,0 +1,135 @@
+backend:
+  name: git-gateway
+
+media_folder: "content/img" # Folder where user uploaded files should go
+public_folder: "img"
+publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  #- name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+  #  label: "Post" # Used in the UI, ie.: "New Post"
+  #  folder: "content/blog" # The path to the folder where the documents are stored
+  #  create: true # Allow users to create new documents in this collection
+  #  fields: # The fields each document in this collection have
+  #    - {label: "Title", name: "title", widget: "string"}
+  #    - {label: "Publish Date", name: "date", widget: "datetime"}
+  #    - {label: "Image", name: "banner", widget: "image", required: false}
+  #    - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/_index.md"
+        label: "Home Page"
+        name: "Home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Banner Background Image, name: jumbotron_bg_img, widget: image, required: false}
+          - {label: Banner Logo, name: jumbotron_logo_img, widget: image, required: false}
+          - {label: Show Alert, name: alert, widget: boolean, default: false}
+          - {label: Alert Announcment, name: alert_announcement, widget:string, required: false}
+          - {label: Welcome Message Heading, name: welcome_message_heading, widget: string, required: false}
+          - {label: Welcome Message, name: welcome_message, widget: text, required: false}
+          - {label: Welcome Message Button Text, name: welcome_message_button_text, widget: string, required: false}
+          - {label: Welcome Message Button Link, name: welcome_message_button_URL, widget: string, required: false}
+          - label: "Front Boxes"
+            name: "front_boxes"
+            widget: list
+            fields:
+              - {label: Headings, name: heading, widget: string}
+              - {label: Link, name: url, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: Open in new window?, name: window, widget: boolean, default: false}
+          - {label: Front More Visible?, name: front_more_visible, widget: boolean, default: true}
+          - {label: Front Section 2 Image, name: front_more_img, widget: image, required: false}
+          - {label: Front Section 2 Heading, name: front_more_heading, widget: string, required: false}
+          - {label: Front Section 2 Text, name: front_more_text, widget: string, required: false}
+          - {label: Front Section 2 Button Text, name: front_more_button_text, widget: string, required: false}
+          - {label: Front Section 2 Button Link, name: front_more_button_url, widget: string, required: false}
+          - {label: Front Last Visible?, name: front_last_visible, widget: boolean, default: true, required: false}
+          - {label: Front Last Background Image, name: front_last_bg_img, widget: image, required: false}
+          - {label: Front Last Heading, name: front_last_heading, widget: string, required: false}
+          - {label: Front Last Text Lead, name: front_last_text_lead, widget: string, required: false}
+          - {label: Front Last Text, name: front_last_text, widget: string, required: false}
+          - {label: Front Last Button Text, name: front_last_button_text, widget: string, required: false}
+          - {label: Front Last Button Link, name: front_last_button_url, widget: string, required: false}
+      - file: "content/contact.md"
+        label: "Contact Us"
+        name: "contact"
+        fields:
+          - {label: Layout Hidden, name: layout, widget: hidden, default: "contact"}
+          - {label: Contact Us, name: title, widget: string, required: false}
+          - {label: Heading, name: heading, widget: string, required: false}
+          - {label: Top Content Heading, name: top_content_heading, widget: string, required: false}
+          - {label: Top Content, name: top_content, widget: string, required: false}
+          - {label: Staff Heading, name: staff_heading, widget: string, required: false}
+          - {label: Staff Text, name: staff_subtext, widget: text, required: false}
+          - label: "Staff"
+            name: "staff"
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string, required: false}
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Contact Info, name: contact, widget: string, required: false}
+              - {label: Image, name: img, widget: image, required: false}
+
+
+  - name: "schedule"
+    label: "Schedule"
+    files:
+      - file: "data/schedule.yaml"
+        label: "Schedule"
+        name: "times"
+        create: true
+        fields:
+          - label: "Mass, Confession, Event, etc"
+            name: "times"
+            create: true
+            widget: list
+            fields:
+              - {label: Day, name: day, widget: string}
+              - {label: Time, name: time, widget: string}
+  - name: "bulletins"
+    label: "Bulletin"
+    folder: "content/bulletin"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Bulletin PDF", name: "bulletin_pdf", widget: "file"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "data"
+    label: "Settings"
+    files:
+      - file: "data/settings.yaml"
+        label: "Site Settings"
+        name: "site_settings"
+        fields:
+          - {label: Site Title, name: site_title, widget: string}
+          - {label: Site Address, name: site_address, widget: string}
+          - {label: Site City, name: site_city, widget: string}
+          - {label: Site State, name: site_state, widget: string}
+          - {label: Site Zip, name: site_zip, widget: string}
+          - {label: Address Latitude, name: site_latitude, widget: string, required: false}
+          - {label: Address Longitude, name: site_longitude, widget: string, required: false}
+          - {label: Direction (from Google), name: site_direction, widget: string, required: false}
+          - {label: Phone Number (XXX) XXX-XXXX, name: site_phone, widget: string}
+          - {label: Fax Number (XXX) XXX-XXXX, name: site_fax, widget: string, required: false}
+          - {label: Email, name: site_email, widget: string}
+          - {label: ChurchDB URL, name: site_churchDBURL, widget: string, required: false}
+          - {label: eGiving URL, name: site_eGiving, widget: string, required: false}
+          - {label: Site Navigation Image, name: site_navbar_img, widget: image, required: false}
+          - {label: Site Footer Image, name: site_footer_img, widget: image, required: false}
+          - {label: Enable Topbar?, name: site_topbar_enable, widget: boolean, default: true}
+          - label: "menus"
+            name: "menu"
+            widget: "object"
+            fields:
+              - label: "Social Media"
+                name: "topbar"
+                widget: "list"
+                fields:
+                - {label: name, name: name, widget: string}
+                - {label: url, name: url, widget: string}
+                - {label: pre, name: pre, widget: string}

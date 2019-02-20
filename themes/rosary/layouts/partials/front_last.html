@@ -1,0 +1,16 @@
+{{ if eq .Params.front_last_visible "true" }}
+<section style="background: url({{ .Params.front_last_bg_img}}) center top no-repeat;
+background-size: cover;
+background-position: 50% 35%;" class="no-mb color-white text-center box-image no-mt" data-pg-name="Section">
+    <div class="d-flex align-items-center justify-content-center overlay">
+        <div class="p-sm-5 pt-5 pb-5">
+            <div class="heading text-center">
+                <h2>{{ .Params.front_last_heading }}</h2>
+            </div>
+            <p class="lead mb-small">{{ .Params.front_last_text_lead }}</p>
+            <p class="mb-small">{{ .Params.front_last_text }}</p>
+            {{ if .Params.front_last_button_url }}<p><a class="btn btn-template-outlined-white" href="{{ .Params.front_last_button_url}}" target="_self">{{ .Params.front_last_button_text}}</a></p>{{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

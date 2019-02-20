@@ -1,0 +1,122 @@
+/* your styles go here */
+
+/*.box-image-text .image {
+  min-height: 200px;
+  max-height: 200px;
+}*/
+body {
+  font-size: 18px;
+}
+
+.box-simple {
+  min-height: 230px;
+}
+
+#top p{
+  margin: 0;
+    font-size: 12px;
+    padding-top: 5px;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    font-family: 'Gentium Basic';
+    font-size: 2.7rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    padding-top: 21px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.page-subtitle {
+  margin: 14px auto 0;
+  font-family: 'Gentium Basic';
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  color: rgb(255, 252, 252);
+}
+
+.page-title h2 {
+  margin: 0 auto;
+  font-size: 6rem;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(255, 252, 252);
+}
+.bar.background-church {
+z-index: 67;
+padding-top: 158px;
+padding-right: 75px;
+padding-left: 75px;
+background: rgb(255, 255, 255);
+background: -webkit-linear-gradient(0deg, rgba(0, 48, 63, 0.8) 0%, rgba(0, 48, 63, 0.85) 0%), url('../img/IMG_0316.jpg') rgb(255, 255, 255);
+background:    -moz-linear-gradient(0deg, rgba(0, 48, 63, 0.8) 0%, rgba(0, 48, 63, 0.85) 0%), url('../img/IMG_0316.jpg') rgb(255, 255, 255);
+background:      -o-linear-gradient(0deg, rgba(0, 48, 63, 0.8) 0%, rgba(0, 48, 63, 0.85) 0%), url('../img/IMG_0316.jpg') rgb(255, 255, 255);
+background:     -ms-linear-gradient(0deg, rgba(0, 48, 63, 0.8) 0%, rgba(0, 48, 63, 0.85) 0%), url('../img/IMG_0316.jpg') rgb(255, 255, 255);
+background:         linear-gradient(450deg, rgba(0, 48, 63, 0.8) 0%, rgba(0, 48, 63, 0.85) 0%), url('../img/IMG_0316.jpg') rgb(255, 255, 255);
+background-repeat: repeat, no-repeat;
+background-size: 100% 100%, cover;
+background-position: 0% 0%, 100% 20%;
+background-attachment: scroll, scroll;
+}
+
+#heading-breadcrumbs h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+#heading-breadcrumbs {
+    background: linear-gradient(450deg, rgba(0, 48, 63, 0.8) 1.6666666666666667%, rgba(0, 48, 63, 0.8) 100%) rgb(13, 50, 88);
+    padding: 20px 0;
+    margin-bottom: 40px;
+    opacity: .8;
+}
+
+.horizontal .photo-gallery-row {
+    width: 95%;
+    margin: 45px auto 0;
+}
+
+.clearfix {
+}
+
+.stgeorge-photo {
+    float: left;
+    height: 243px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.5);
+}
+
+.stgeorge-photo-1 {
+    width: 31.5523182957%;
+    background-image: url(img/IMG_0326.jpg);
+    background-position: left center;
+}
+
+.stgeorge-photo-2 {
+    width: 31.5529991783%;
+    margin-left: 2.58772%;
+    background-image: url(img/IMG_0327.jpg);
+    background-position: center center;
+}
+
+.stgeorge-photo-3 {
+    width: 31.4181573014%;
+    margin-left: 2.81642%;
+    background-image: url(img/IMG_0336.JPG);
+    background-position: left center;
+    background-color: rgb(222, 222, 222);
+}

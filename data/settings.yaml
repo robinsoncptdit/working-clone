@@ -1,0 +1,32 @@
+site_title: Our Lady of the Rosary Catholic Church
+site_address: 5622 JULIE DRIVE • HIGHWAY 231 BAYOU GEORGE
+site_city: Panama City
+site_state: FL
+site_zip: 32404
+site_latitude: 30.246317
+site_longitude: -85.564166
+site_direction: 'Our Lady of the Rosary, Panama City, FL, 32404'
+site_phone: 850-769-5067
+site_fax: 850-769-1227
+site_email: office@olr.ptdiocese.org
+site_churchDBURL: >-
+  https://www.churchdb.com/churchdb/SelfRegister.asp?PAGE=REGISTRATION_PAGE&iOrgzKey=77&ddlSite=576
+site_eGiving: >-
+  https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRpD4Ri1ipMz8SjtO-fInVtuhjXsUKRLlmI4vCU4-rZZZ2EvVVAEjqawDomKT1pbouYCLiHsYNviTLNfVAvw7pMg=&ver=3
+site_navbar_img: /img/logo-nav.png
+site_footer_img: img/olr-footer.png
+site_topbar_enable: true
+menu:
+  topbar:
+    - name: Facebook
+      pre: <i class='fa fa-facebook'></i>
+      url: 'https://www.facebook.com'
+    - name: Twitter
+      pre: <i class='fa fa-twitter'></i>
+      url: 'https://www.twitter.com'
+    - name: Instagram
+      pre: <i class='fa fa-instagram'></i>
+      url: 'https://www.instagram.com'
+    - name: Email
+      pre: <i class='fa fa-envelope'></i>
+      url: 'mailto:office@olr.ptdiocese.org'

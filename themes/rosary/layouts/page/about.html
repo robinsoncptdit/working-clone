@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    <div id="all">
+
+        <header>
+
+          {{ partial "top.html" . }}
+
+          {{ partial "nav.html" . }}
+
+        </header>
+
+        {{ partial "bigblock.html" . }}
+
+        <!-- {{ partial "carousel.html" . }}-->
+
+        <section class="bar background-white no-mb padding-big text-center-sm">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12 heading text-center">
+                  <h2>{{ .Params.top_content_heading }}</h2>
+              </div>
+            </div>
+
+            </div>
+            <div class="row">
+              <div class="col-md-12">{{ .Params.top_content | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        {{ partial "middle_blurb.html" . }}
+
+        <section class="bar background-white no-mb padding-big text-center-sm">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12 heading text-center">
+                <h2>{{ .Params.bottom_content_heading }}</h2>
+              </div>
+            </row>
+            <div class="row">
+              <div class="col-md-4">
+                  <img src="{{ .Params.bottom_content_imgURL }}" class="img-responsive">
+              </div>
+              <div class="col-md-8">{{ .Params.bottom_content | markdownify }}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- image gallery goofing
+      <section>
+        <div class="container">
+          <div class="col-md-12">
+            {{ $url := "/img" }}
+            {{ $files := readDir "/static/img"}}
+            {{ range $files }}
+            <div class="row">
+              <div class="col-md-4">
+                {{ .Name }}<br/>
+                <img src="{{$url}}/{{.Name | urlize }}" class="img-responsive">
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </section>
+-->
+
+        {{ partial "footer.html" . }}
+
+    </div>
+    <!-- /#all -->
+
+    {{ partial "scripts.html" . }}
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/#/collections/post";
+        });
+      }
+    });
+  }
+</script>
+
+  </body>
+</html>

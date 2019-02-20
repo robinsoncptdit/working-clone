@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        <div id="all">
+            <!-- Top bar-->
+            {{ partial "top.html" . }}
+            <!-- Top bar end-->
+            <!-- Login Modal-->
+
+            <!--{{ partial "login_modal.html" . }}-->
+
+
+
+                {{ partial "nav.html" . }}
+
+
+                <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0 relative-positioned">
+                    <div class="dark-mask"></div>
+                    <div class="container first-content">
+                        <div class="row d-flex align-items-center flex-wrap">
+                            <div class="col-md-7">
+                                <h1 class="h2">{{ .Params.heading }}</h1>
+                            </div>
+                            <div class="col-md-5">
+                                <ul class="breadcrumb d-flex justify-content-end">
+                                    <li class="breadcrumb-item">
+                                        <a href="/">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">{{ .Params.heading }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div id="content" class="pb-4">
+                  <div class="container">
+                      <div class="row">
+                          <div id="checkout" class="col-lg-9">
+                              <div class="box border-bottom-0 border-0 pt-2 mb-0">
+                                  <!--<ul id="pills-tab" role="tablist" class="nav nav-pills nav-fill">
+                                      <li class="nav-item">
+                                          <a id="pills-mass-tab" data-toggle="pill" href="#pills-mass" role="tab" aria-controls="pills-home" aria-selected="true" class="nav-link"><i class="fa fa-bell-o"></i><br>Mass</a>
+                                      </li>
+                                      <li class="nav-item">
+                                          <a id="pills-confession-tab" data-toggle="pill" href="#pills-confession" role="tab" aria-controls="pills-profile" aria-selected="false" class="nav-link"><i class="fa fa-chain-broken"></i><br>Confession</a>
+                                      </li>
+                                      <li class="nav-item">
+                                          <a id="pills-adoration-tab" data-toggle="pill" href="#pills-adoration" role="tab" aria-controls="pills-profile" aria-selected="false" class="nav-link"><i class="fa fa-child"></i><br>Adoration</a>
+                                      </li>
+                                  </ul>-->
+                                  <div id="pills-tabContent" class="tab-content">
+                                      <div id="pills-mass" role="tabpanel" aria-labelledby="pills-home-tab" class="tab-pane fade show active">
+                                        {{ range $index, $element := .Site.Data.schedule.times }}
+                                          <h3>{{ .day }}</h3>
+                                          <p class="lead">{{ .time }}</p>
+                                        {{ end }}
+                                          <p>Please check bulletin for changes to daily mass times</p>
+                                      </div>
+                                  <!--  <div id="pills-confession" role="tabpanel" aria-labelledby="pills-profile-tab" class="tab-pane fade">
+                                        {{ range $index, $element := .Site.Data.schedule.confession }}
+                                          <h3>{{ .day }}</h3>
+                                          <p class="lead">{{ .time }}</p>
+                                        {{ end }}
+                                          <p>or by appointment</p>
+                                      </div>
+                                      <div id="pills-adoration" role="tabpanel" aria-labelledby="pills-profile-tab" class="tab-pane fade">
+                                        {{ range $index, $element := .Site.Data.schedule.adoration }}
+                                          <h3>{{ .day }}</h3>
+                                          <p class="lead">{{ .time }}</p>
+                                        {{ end }}
+                                      </div>-->
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3">
+                              <div class="box p-0 border-top-0 border-bottom-0 no-mb" data-pg-name="Box">
+                                  <div class="text-center border-top-0 box-header border-bottom mt-0">
+                                      <h3 class="mb-0">Directions</h3>
+                                  </div>
+                                  <div class="box-simple">
+                                      <div class="icon-outlined">
+                                          <i class="fa fa-map-marker"></i>
+                                      </div>
+                                      <p><span style="font-size: 0.9rem; letter-spacing: 0.05rem;">{{ .Site.Data.settings.site_address }}<br></span><span style="font-size: 0.9rem; letter-spacing: 0.05rem;">{{ .Site.Data.settings.site_city }}</span></p>
+                                  </div>
+                                  <div class="col-md-12 text-center padding-bottom">
+                                      <a class="btn btn-template-outlined" href="{{ .Site.Data.settings.site_direction }}" target="_blank"> Get Directions</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            <!-- FOOTER -->
+
+            {{ partial "map.html" . }}
+
+
+</div>
+{{ partial "footer.html" . }}
+        </div>
+        <!-- Javascript files-->
+
+        {{ partial "footer_js_inc.html" . }}
+
+        <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/#/collections/post";
+        });
+      }
+    });
+  }
+</script>
+
+    </body>
+</html>

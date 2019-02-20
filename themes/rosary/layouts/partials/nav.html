@@ -1,0 +1,48 @@
+<header class="nav-holder make-sticky">
+<div id="navbar" role="navigation" class="navbar navbar-expand-lg">
+    <div class="container">
+        <a href="index.html" class="navbar-brand home">
+          {{ with .Site.Data.settings.site_navbar_img }}
+            <img alt="Our Lady of the Rosary Logo" class="d-inline-block d-md-none" src="{{ . }}"/>
+            <span class="sr-only">Our Lady of the Rosary Catholic Church - go to homepage</span>
+          {{ else }}
+            <h3 style="color: #ffffff;">{{ .Site.Data.settings.site_title }}</h3>
+          {{ end }}
+        </a>
+        <button type="button" data-toggle="collapse" data-target="#navigation" class="navbar-toggler btn-template-outlined">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa-align-justify fa"></i>
+        </button>
+        <div id="navigation" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav ml-auto"> <!-- style="padding-bottom: 0;" -->
+                <li class="nav-item">
+                    <a href="/" target="_self">Home <b class="caret"></b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/schedule" target="_self">Schedule<b class="caret"></b></a>
+                </li>
+                <!-- ========== FULL WIDTH MEGAMENU ==================-->
+                <!-- ========== FULL WIDTH MEGAMENU END ==================-->
+                <!-- ========== Contact dropdown ==================-->
+                <li class="nav-item">
+                    <a href="/contact" target="_self">Contact <b class="caret"></b></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRpD4Ri1ipMz8SjtO-fInVtuhjXsUKRLlmI4vCU4-rZZZ2EvVVAEjqawDomKT1pbouYCLiHsYNviTLNfVAvw7pMg=&ver=3" target="_blank">Give<b class="caret"></b></a>
+                </li>
+                <!-- ========== Contact dropdown end ==================-->
+            </ul>
+        </div>
+        <div id="search" class="collapse clearfix">
+            <form role="search" class="navbar-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                    <span class="input-group-btn"> <button type="submit" class="btn btn-template-main">
+                            <i class="fa fa-search"></i>
+                        </button></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</header>

@@ -1,0 +1,18 @@
+{{ if eq .Params.front_more_visible "true" }}
+<section class="bar text-center-md bg-light" id="parish-hall-rental">
+    <div class="container padding-vertical">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-12 col-lg-6">
+                <a href="#">
+                    <img class="w-100 img-thumbnail" src="{{ .Params.front_more_img }}" alt="">
+                </a>
+            </div>
+            <div class="col-md-12 col-lg-6 pt-2 mt-md-4 mt-lg-0 mt-4">
+                <h2 class="text-uppercase">{{ .Params.front_more_heading }}</h2>
+                <p class="lead mb-small">{{ .Params.front_more_text }}</p>
+                <p><a class="btn btn-template-main" href="{{ .Params.front_more_button_url}}">{{ .Params.front_more_button_text}}</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

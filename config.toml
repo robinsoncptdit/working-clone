@@ -1,0 +1,141 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Our Lady of the Rosary Catholic Church - Panama City, FL"
+theme = "rosary"
+themesDir = "themes/"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+# Define the number of posts per page
+paginate = 10
+
+[menu]
+
+[[menu.main]]
+    name = "HOME"
+    url  = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "SCHEDULE"
+    url  = "/schedule/"
+    weight = 2
+
+[[menu.main]]
+    name = "CONTACT"
+    url  = "/contact/"
+    weight = 3
+
+[[menu.main]]
+    name = "GIVE"
+    url  = "https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRpD4Ri1ipMz8SjtO-fInVtuhjXsUKRLlmI4vCU4-rZZZ2EvVVAEjqawDomKT1pbouYCLiHsYNviTLNfVAvw7pMg=&ver=3"
+    weight = 4
+
+  [params]
+    viewMorePostLink = "/blog/"
+    author = "" # Was devcows - switch
+    defaultKeywords = ["keyword1", "keyword2", "keyword3"] #change
+    defaultDescription = "chuch name, place, etc" # change
+
+    # Google Maps API key (if not set will default to not passing a key.)
+    googleMapsApiKey = "AIzaSyB23xc29oiYCdc67_uN4TT30VikGPz2I-Q"
+
+    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
+    style = "blue" #fix
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+    #
+    # Enable the contact form by entering your Formspree.io email
+    email = "" # only if using formspree - most likely not
+
+    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+    copyright = "Copyright (c) 2018, Our Lady of the Rosary Catholic Church. All rights reserved."
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/Artboard-1.svg" # change
+    #address = """<p><strong>Our Lady of the Rosary Catholic Church</strong>
+    #    <br>5622 JULIE DRIVE
+    #    <br>HIGHWAY 231 BAYOU GEORGE
+    #    <br>PANAMA CITY, FL 32404
+    #    <br>Phone: 850-769-5067
+    #    <br>Email: <a href="mailto:office@olr.ptdiocese.org">office@olr.ptdiocese.org</a>
+    #    <br>Office Hours: Please call
+    #  </p>
+    #  """ #change
+    #latitude = "30.246317" # find in Google maps and put here
+    #longitude = "-85.564166"
+    #direction = ""
+
+[Permalinks]
+    blog = "/blog/:year/:month/:day/:filename/"
+
+# Enable or disable top bar with social icons
+#[params.topbar]
+#    enable = true
+#    text = """<p class="hidden-sm hidden-xs">Contact us at 850-769-5067 or office@olr.ptdiocese.org</p>
+#      <p class="hidden-md hidden-lg"><a href="tel:1-850-769-5067" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
+#      <a href="mailto:office@olr.ptdiocese.org">office@olr.ptdiocese.org" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+#      </p>
+#      """ # change to yours
+
+# Enable and disable widgets for the right sidebar
+[params.widgets]
+    categories = true
+    tags = true
+    search = true
+
+[params.carousel]
+    enable = true
+    # All carousel items are defined in their own files. You can find example items
+    # at 'exampleSite/data/carousel'.
+    # For more informtion take a look at the README.
+
+[params.features]
+    enable = true
+    # All features are defined in their own files. You can find example items
+    # at 'exampleSite/data/features'.
+    # For more informtion take a look at the README.
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "Testimonials"
+    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+
+[params.see_more]
+    enable = true
+    icon = "fa fa-file-code-o"
+    title = "Do you want to see more?"
+    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
+    link_url = "#"
+    link_text = "Check other homepages"
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "Our Clients"
+    subtitle = ""
+
+[params.recent_posts]
+    enable = false
+    title = "From our blog"
+    subtitle = "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."

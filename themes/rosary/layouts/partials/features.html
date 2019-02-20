@@ -1,0 +1,36 @@
+{{ if isset .Params "features" }}
+<section class="bar background-white">
+    <div class="container">
+      {{ range $index, $element := .Params.features }}
+    {{ if eq (mod $index 3) 0 }}
+    	<div class="col-md-12">
+            <div class="row">
+		{{ end }}
+				<div class="col-md-4">
+        <div class="box-image-text">
+          <div class="top">
+          <div class="image">
+            <img src="{{ $element.imageURL }}" class="img-responsive">
+          </div>
+          <div class="bg"></div>
+          <div class="text">
+            <p class="buttons"><a href="{{ $element.link_to }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a></p>
+          </div>
+        </div>
+
+        <div class="content">
+          <h4>{{ $element.heading }}</h4>
+          <p>{{ $element.text }}</p>
+          <p><button type="button" onclick="window.location.href = '{{ $element.link_to }}'" class="btn btn-sm btn-template-main">Read More</button></p>
+        </div>
+        </div>
+
+        </div>
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Params.features) 1 )) }}
+			</div>
+		</div>
+		{{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,175 @@
+  <!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        <div id="all">
+            <!-- Top bar-->
+            {{ partial "top.html" . }}
+            <!-- Top bar end-->
+            <!-- Login Modal-->
+
+            <!--{{ partial "login_modal.html" . }}-->
+
+
+
+                {{ partial "nav.html" . }}
+
+
+            <!--<div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0 relative-positioned">
+                <div class="dark-mask"></div>
+                <div class="container first-content">
+                    <div class="row d-flex align-items-center flex-wrap">
+                        <div class="col-md-7">
+                            <h1 class="h2">{{ .Params.heading }}</h1>
+                        </div>
+                        <div class="col-md-5">
+                            <ul class="breadcrumb d-flex justify-content-end">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">{{ .Site }}</a>
+                                </li>
+                                <li class="breadcrumb-item active">{{ .Params.heading }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+            <div id="content">
+                <div id="contact" class="container">
+                    <section class="bar">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="heading">
+                                    <h2>{{ .Params.heading }}</h2>
+                                </div>
+                                <p class="lead">{{ .Params.top_content  }}</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <div class="box-simple">
+                                    <div class="icon-outlined">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <h3 class="h4">Visit us at</h3>
+                                    <p>{{ .Site.Data.settings.site_address }}<br/>{{ .Site.Data.settings.site_city }}, {{ .Site.Data.settings.site_state }} {{ .Site.Data.settings.site_zip }}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box-simple">
+                                    <div class="icon-outlined">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <h3 class="h4">call us</h3>
+                                    <p>Please reach out to us at the parish office</p>
+                                    <p>Phone <strong>{{ .Site.Data.settings.site_phone }}</strong><br></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box-simple">
+                                    <div class="icon-outlined">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <h3 class="h4">Email &amp; Fax us</h3>
+                                    <p>Reference the contact list below for emails</p>
+                                    <p>Fax <strong>{{ .Site.Data.settings.site_fax }}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="map"></div>
+            </div>
+            {{ partial "map.html" . }}
+            <!-- GET IT-->
+            <div class="bar color-white bg-primary">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <div class="heading">
+                                <h2>{{ .Params.staff_heading }}</h2>
+                            </div>
+                            <p class="lead">{{ .Params.staff_subtext }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container team">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="team-member">
+                                <div class="image">
+                                    <a href="team-member.html">
+                                        <img src="{{ .Site.BaseURL }}img/person-1.jpg" alt="" class="img-fluid rounded-circle">
+                                    </a>
+                                </div>
+                                <h3></h3>
+                                <h3>fr. William Brownie</h3>
+                                <p class="role">Pastor</p>
+                                <div class="text">
+                                    <a href="mailto:deak0744@mchsi.com">deak0744@mchsi.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-animate="fadeInUp" class="col-md-4">
+                            <div data-animate="fadeInUp" class="team-member">
+                                <div class="image">
+                                    <a href="team-member.html">
+                                        <img src="{{ .Site.BaseURL }}img/person-3.png" alt="" class="img-fluid rounded-circle">
+                                    </a>
+                                </div>
+                                <h3></h3>
+                                <h3>Debby Wuest</h3>
+                                <p class="role">Parish Secretary</p>
+                                <div class="text">
+                                    <a href="mailto:office@olr.ptdiocese.org">office@olr.ptdiocese.org</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div data-animate="fadeInUp" class="team-member">
+                                <div class="image">
+                                    <a href="team-member.html">
+                                        <img src="{{ .Site.BaseURL }}img/person-4.jpg" alt="" class="img-fluid rounded-circle">
+                                    </a>
+                                </div>
+                                <h3></h3>
+                                <h3>John and Louise Zemlin</h3>
+                                <p class="role">Office Staff</p>
+                                <div class="text">
+                                    <a href="mailto:zemlinjl@gmail.com">zemlinjl@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.team-member-->
+                        <!-- /.team-member-->
+                        <!-- /.team-member-->
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER -->
+
+            {{ partial "footer.html" . }}
+
+          </div>
+          <!-- Javascript files-->
+
+          {{ partial "footer_js_inc.html" . }}
+
+          <script>
+          if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+          if (!user) {
+          window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/#/collections/post";
+          });
+          }
+          });
+          }
+          </script>
+
+          </body>
+          </html>
+
+          </body>
+          </html>

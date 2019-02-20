@@ -1,0 +1,24 @@
+<div class="container team">
+        {{ range $index, $element := .Params.staff }}
+		{{ if eq (mod $index 3) 0 }}
+		<div class="col-md-12">
+            <div class="row text-center">
+		{{ end }}
+				<div class="col-md-4">
+                    <div class="team-member">
+                        <div class="image">
+                            <img src="{{ $element.img }}" alt="" class="img-fluid rounded-circle">
+                        </div>
+                        <h3>{{ $element.name }}</h3>
+                        <p class="role">{{ $element.title }}</p>
+                        <div class="text">
+                            <a href="mailto:{{ $element.contact }}">{{ $element.contact }}</a>
+                        </div>
+                    </div>
+                </div>
+		{{ if or (eq (mod $index 3) 2) (eq $index (sub (len $.Params.staff) 1 )) }}
+			</div>
+		</div>
+		{{ end }}
+        {{ end }}
+    </div>

@@ -1,0 +1,15 @@
+{{ if isset .Site.Params "see_more" }}
+{{ if .Site.Params.see_more.enable }}
+<section class="bar no-mb color-white text-center" style="background: url('{{.Params.middle_blur_img}}') center top no-repeat; background-attachment: fixed; background-size: cover;">
+    <div class="dark-mask"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="lead page-subtitle text-center">{{ .Params.middle_blurb }}</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

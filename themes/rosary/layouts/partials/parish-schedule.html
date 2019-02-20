@@ -1,0 +1,26 @@
+{{ if isset .Params "parish_schedule" }}
+<a name="Schedule"></a>
+<section class="bar background-white">
+    <div class="container">
+      <div class="heading text-center">
+        <h2 class="text-center">Parish Schedule</h2>
+      </div>
+      {{ range $index, $element := .Params.parish_schedule }}
+    {{ if eq (mod $index 2) 0 }}
+    	<div class="col-md-12">
+            <div class="row">
+		{{ end }}
+				<div class="col-md-6 text-center">
+          <div class="content">
+            <h3>{{ $element.heading }}</h3>
+            <p>{{ $element.text }}</p>
+          </div>
+        </div>
+		{{ if or (eq (mod $index 2) 2) (eq $index (sub (len $.Params.parish_schedule) 1 )) }}
+			</div>
+		</div>
+		{{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}

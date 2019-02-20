@@ -1,0 +1,21 @@
+<footer class="main-footer">
+    <div class="container text-center-sm">
+        <div class="row text-center center d-flex align-items-center">
+            <div class="col-md-4 text-uppercase pb-4 pb-md-0">
+                <p style="color: #787F81 !important">{{ .Site.Data.settings.site_address }}<br>{{ .Site.Data.settings.site_city }}, {{ .Site.Data.settings.site_state }} {{ .Site.Data.settings.site_zip }}</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ .Site.BaseURL }}{{ .Site.Data.settings.site_footer_img }}" alt="..." class="img-fluid">
+            </div>
+            <div class="col-md-4 text-uppercase pt-4 pt-md-0">
+                <p style="color: #787F81 !important">Phone: {{ .Site.Data.settings.site_phone }}<br>
+Fax: {{ .Site.Data.settings.site_fax }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights">
+        <div class="container text-center">
+            <p>&copy; {{ now.Format "2006"}} <a href="https://ptdiocese.org">{{ .Site.Data.settings.site_title }}</a></p>
+        </div>
+    </div>
+</footer>

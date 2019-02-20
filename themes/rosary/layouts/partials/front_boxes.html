@@ -1,0 +1,21 @@
+<section class="no-mb relative-positioned padding-horizontal bar no-padding-top" style="/* background: url(img/fixed-background-2.jpg) center top no-repeat */
+/* background-size: cover */">
+    <div class="container">
+        <div class="row">
+          {{ range $index, $element := .Params.front_boxes }}
+            <div class="col-lg-3 col-md-6 col-sm-6 p-3">
+                <div class="box-icon {{ .icon_class }} hover-big text-center {{ .text_class }}" data-pg-name="Icon Box">
+                    <div class="box-simple">
+                        <a href="{{ .url }}" target="{{ with .window }}_blank {{ else }}_self{{ end }}">
+                            <div class="icon-outlined icon-lg">
+                                <i class="{{ .icon }}"></i>
+                            </div>
+                        </a>
+                        <h3 class="h4">{{ .heading }}</h3>
+                    </div>
+                </div>
+            </div>
+          {{ end }}
+        </div>
+    </div>
+</section>
