@@ -99,6 +99,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Bulletin PDF", name: "bulletin_pdf", widget: "file"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
+  - name: "docs"
+    label: "Document"
+    folder: "content/doc"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Document PDF", name: "doc_pdf", widget: "file"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
   - name: "data"
     label: "Settings"
     files:

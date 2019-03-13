@@ -42,6 +42,7 @@
                           <h2>Bulletins</h2>
                       </div>
                     </section>
+                    <p><a href="/doc">Click here to go to the Documents page.</a></p>
                       <ul>
                       {{ $paginator := .Paginate (where .Data.Pages "Type" "bulletin") }}
                       {{ range $paginator.Pages }}
@@ -116,7 +117,7 @@
         }
         </script>
 
-        
+
 
         </body>
         </html>
