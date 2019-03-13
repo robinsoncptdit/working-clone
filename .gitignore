@@ -3,3 +3,4 @@
 /public/.*
 /public
 public/*
+public/
