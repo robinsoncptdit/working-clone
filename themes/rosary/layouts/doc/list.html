@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "head.html" . }}
+  <body>
+      <div id="all">
+          <!-- Top bar-->
+          {{ partial "top.html" . }}
+          <!-- Top bar end-->
+          <!-- Login Modal-->
+
+              {{ partial "nav.html" . }}
+              <div id="heading-breadcrumbs" class="brder-top-0 border-bottom-0 relative-positioned">
+                  <div class="dark-mask"></div>
+                  <div class="container first-content">
+                      <div class="row d-flex align-items-center flex-wrap">
+                          <div class="col-md-7">
+                              <h1 class="h2">Bulletins</h1>
+                          </div>
+                          <div class="col-md-5">
+                              <ul class="breadcrumb d-flex justify-content-end">
+                                  <li class="breadcrumb-item">
+                                      <a href="index.html">Home</a>
+                                  </li>
+                                  <li class="breadcrumb-item active">Documents</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+<!-- THIS IS THE REAL -->
+
+<div id="content">
+    <div class="container">
+        <section>
+            <div class="row">
+
+                <div class="col-md-12 clearfix">
+                    <div id="text-page" style="padding: 75px 0;">
+                      <section>
+                      <div class="heading">
+                          <h2>Documents</h2>
+                      </div>
+                    </section>
+                      <ul>
+                      {{ $paginator := .Paginate (where .Data.Pages "Type" "doc") }}
+                      {{ range $paginator.Pages }}
+                        <li><a href="{{ .Params.doc_pdf | relURL }}">{{ .Title }}</a></li>
+                      {{ end }}
+                    </ul>
+
+
+                    </div>
+
+
+                </div>
+                <!-- /.col-md-12 -->
+            </div>
+            <!-- /.row -->
+        </section>
+    </div>
+    <!-- /.container -->
+</div>
+
+<!-- END REAL -->
+
+
+        <!--  <div id="content">
+              <div class="container">
+                  <section>
+                      <div class="row">
+                          <div class="col-md-12 clearfix">
+                            <div id="text-page">
+                              <div class="heading">
+                                  <h2>Bulletins</h2>
+                              </div>
+                  </section>
+                  <section>
+                    <div class="row">
+                        <div class="col-md-12 col-lg-12">
+                            <!--INSERT CONTENT HERE-->
+                          <!--  <ul>
+                            {{ $paginator := .Paginate (where .Data.Pages "Type" "bulletin") }}
+                            {{ range $paginator.Pages }}
+                              <li><a href="{{ .Params.bulletin_pdf | relURL }}">{{ .Title }}</a></li>
+                            {{ end }}
+                          </ul>
+                        </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>-->
+          <!-- GET IT-->
+
+          <!-- FOOTER -->
+
+          {{ partial "footer.html" . }}
+
+        </div>
+        <!-- Javascript files-->
+
+        {{ partial "footer_js_inc.html" . }}
+
+        <script>
+        if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+        if (!user) {
+        window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/#/collections/post";
+        });
+        }
+        });
+        }
+        </script>
+
+
+
+        </body>
+        </html>
