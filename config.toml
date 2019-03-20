@@ -30,9 +30,14 @@ paginate = 10
     weight = 3
 
 [[menu.main]]
+    name = "CONTACT"
+    url  = "/contact/"
+    weight = 4
+
+[[menu.main]]
     name = "GIVE"
     url  = "https://www.eservicepayments.com/cgi-bin/Vanco_ver3.vps?appver3=Fi1giPL8kwX_Oe1AO50jRpD4Ri1ipMz8SjtO-fInVtuhjXsUKRLlmI4vCU4-rZZZ2EvVVAEjqawDomKT1pbouYCLiHsYNviTLNfVAvw7pMg=&ver=3"
-    weight = 4
+    weight = 5
 
   [params]
     viewMorePostLink = "/blog/"
