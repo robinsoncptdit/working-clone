@@ -3,6 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/bulletin/some-file/</loc>
+    <lastmod>2019-02-04T17:46:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/bulletin/bulletin-2/</loc>
+    <lastmod>2018-12-20T15:45:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/bulletin/bulletin-1/</loc>
+    <lastmod>2018-12-20T15:43:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/doc/doc-1/</loc>
+    <lastmod>2018-12-20T15:43:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/bulletin/sunday-december-9-2018/</loc>
+    <lastmod>2018-12-06T18:58:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/bulletin/test-first/</loc>
+    <lastmod>2018-12-06T18:45:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/bulletin/</loc>
+    <lastmod>2019-02-04T17:46:23+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -12,16 +48,23 @@
   </url>
   
   <url>
+    <loc>/doc/</loc>
+    <lastmod>2018-12-20T15:43:56+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
+    <lastmod>2019-02-04T17:46:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/schedule/</loc>
   </url>
   
   <url>
     <loc>/tags/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/schedule-and-directions/</loc>
   </url>
   
 </urlset>

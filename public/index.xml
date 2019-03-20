@@ -6,9 +6,64 @@
     <description>Recent content in Home on Our Lady of the Rosary Catholic Church - Panama City, FL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 04 Feb 2019 17:46:23 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Some File</title>
+      <link>/bulletin/some-file/</link>
+      <pubDate>Mon, 04 Feb 2019 17:46:23 +0000</pubDate>
+      
+      <guid>/bulletin/some-file/</guid>
+      <description>OK to delete. Just testing</description>
+    </item>
+    
+    <item>
+      <title>Bulletin 2</title>
+      <link>/bulletin/bulletin-2/</link>
+      <pubDate>Thu, 20 Dec 2018 15:45:34 +0000</pubDate>
+      
+      <guid>/bulletin/bulletin-2/</guid>
+      <description>Second upload. duplicate</description>
+    </item>
+    
+    <item>
+      <title>Bulletin 1</title>
+      <link>/bulletin/bulletin-1/</link>
+      <pubDate>Thu, 20 Dec 2018 15:43:56 +0000</pubDate>
+      
+      <guid>/bulletin/bulletin-1/</guid>
+      <description>First upload. Will duplicate</description>
+    </item>
+    
+    <item>
+      <title>Document 1</title>
+      <link>/doc/doc-1/</link>
+      <pubDate>Thu, 20 Dec 2018 15:43:56 +0000</pubDate>
+      
+      <guid>/doc/doc-1/</guid>
+      <description>First upload. Will duplicate</description>
+    </item>
+    
+    <item>
+      <title>Sunday December 9, 2018</title>
+      <link>/bulletin/sunday-december-9-2018/</link>
+      <pubDate>Thu, 06 Dec 2018 18:58:54 +0000</pubDate>
+      
+      <guid>/bulletin/sunday-december-9-2018/</guid>
+      <description>This is for notes, if needed. It will not be shown on the website.</description>
+    </item>
+    
+    <item>
+      <title>Test First</title>
+      <link>/bulletin/test-first/</link>
+      <pubDate>Thu, 06 Dec 2018 18:45:28 +0000</pubDate>
+      
+      <guid>/bulletin/test-first/</guid>
+      <description>Something else</description>
+    </item>
     
     <item>
       <title>Contact Us</title>
@@ -20,11 +75,11 @@
     </item>
     
     <item>
-      <title>schedule and directions</title>
-      <link>/schedule-and-directions/</link>
+      <title>Schedule</title>
+      <link>/schedule/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/schedule-and-directions/</guid>
+      <guid>/schedule/</guid>
       <description></description>
     </item>
     
